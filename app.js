@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./routes/love');
 var mongoose = require('mongoose');
 
 var app = express();
@@ -24,9 +24,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/love', users);
 
-var mongoURI = "mongodb://localhost:27017/prime_solo_db_01";
+var mongoURI = "mongodb://localhost:27017/prime_solo_angular_01";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {

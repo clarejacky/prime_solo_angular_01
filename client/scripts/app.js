@@ -7,7 +7,7 @@ myApp.controller('GiveController', ['$scope', function($scope){
     $scope.updateGive = function(e){
         e.preventDefault();
         $scope.give = true;
-        $score.giveLove = false;
+        //$score.giveLove = false;
         //$scope.receive = false;
     }
 
