@@ -10,11 +10,39 @@
     <div class="container" ng-controller="GiveController">
     <div class="giveLove">
         <button ng-click="updateGive()" class="btn btn-info">Give Love</button>
-        <div ng-include="'views/giveLove.html'" ng-show="give">
+        <div ng-show="give">
+            <form>
+                <div>
+                    <label for="title">Title:</label>
+                    <input ng-model="love.title" type="text" name="title" id="title"/>
+                </div>
+                <div>
+                    <label for="textarea">Share Your Love Here:</label>
+                    <input ng-model="love.textarea" type="textarea" name="textarea" id="textarea"/>
+                </div>
+                <div>
+                    <label for="name">Name:</label>
+                    <input ng-model="love.name" type="text" name="name" id="name"/>
+                </div>
+                <div>
+                    <input type="submit" ng-click="add(love)" addvalue="Give Some Love"/>
+                </div>
+            </form>
 
         </div>
+        <div class="showLove">
+            <div ng-repeat="love in loveNotes">
+                <h3>{{love.title}}</h3>
+                <p>{{love.textarea}}</p>
+                <p>{{love.name}}</p>
+            </div>
+        </div>
+
     </div>
-    </div>
+
+        </div>
+
+
 <!--<div class="container" ng-controller="ReceiveController">-->
     <!--<div class="receiveLove">-->
         <!--<button ng-click="updateReceive()" class="btn btn-info">Receive Love</button>-->

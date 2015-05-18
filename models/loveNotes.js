@@ -2,7 +2,7 @@
  * Created by ClareJacky on 5/18/15.
  */
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
+    Schema = mongoose.Schema;
 
 var LoveSchema = new Schema({
     title: { type: String, required: true },
