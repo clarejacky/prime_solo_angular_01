@@ -7,7 +7,8 @@ var mongoose = require('mongoose'),
 var LoveSchema = new Schema({
     title: { type: String, required: true },
     textarea: { type: String, required: true },
-    name: String
+    name: String,
+    date: {type: Date, default: new Date()}
 
 });
 
