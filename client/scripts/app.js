@@ -15,9 +15,13 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
     }
 
     $scope.add = function(love){
-        $scope.receivebutton = true;
-        $scope.give = false;
-        return $http.post('/love', love).then(fetchNotes());
+        if(!$scope.love.name || !$scope.love.textarea || !$scope.love.title){
+            alert("Please fill in all data boxes!");
+        } else {
+            $scope.receivebutton = true;
+            $scope.give = false;
+            return $http.post('/love', love).then(fetchNotes());
+        }
     };
     //fetchNotes();
 

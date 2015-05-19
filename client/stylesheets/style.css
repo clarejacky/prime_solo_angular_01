@@ -34,3 +34,7 @@ textarea {
   margin-bottom: 10px;
   width: 100%;
 }
+.receivebutton {
+    float: center;
+  font-size: 120%;
+}
