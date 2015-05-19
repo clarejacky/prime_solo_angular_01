@@ -25,10 +25,13 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
 
     $scope.notes = function () {
         $scope.receive = true;
+        $scope.receivebutton =false;
+
     }
 
     $scope.updateGive = function(){
         $scope.give = true;
+        $scope.receive = false;
     }
 
     //$scope.goodbyeMessage = function(){
