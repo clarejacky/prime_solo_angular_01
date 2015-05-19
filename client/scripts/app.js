@@ -9,15 +9,17 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
         return $http.get('/love').then(function(response){
             console.log(response);
             $scope.love ={};
-            $scope.loveNotes =response.data;
+            $scope.loveNotes = response.data;
             console.log(response.data);
         })
     }
 
     $scope.add = function(love){
+        $scope.receivebutton = true;
+        $scope.give = false;
         return $http.post('/love', love).then(fetchNotes());
     };
-    fetchNotes();
+    //fetchNotes();
 
     //$scope.heading = "Message: ";
 
@@ -27,8 +29,6 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
 
     $scope.updateGive = function(){
         $scope.give = true;
-        //$score.giveLove = false;
-        //$scope.receive = false;
     }
 
     //$scope.goodbyeMessage = function(){

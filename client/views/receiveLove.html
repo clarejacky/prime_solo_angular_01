@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-<p>Love received</p>
+<div ng-repeat="love in loveNotes" class="display col-md-4">
+    <h3>{{love.title}}</h3>
+    <p>{{love.textarea}}</p>
+    <p>{{love.name}}</p>
+</div>
 </body>
 </html>

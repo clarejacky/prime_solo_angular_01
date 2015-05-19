@@ -12,39 +12,18 @@
     <div class="container" ng-controller="GiveController">
       <div class="button col-md-4">
          <div class="receiveLove">
-            <div ng-click='notes()' id="button" class="well">Receive Love</div>
+            <div ng-click='notes()' id="button" ng-show="receivebutton" class="well">Receive Some Love</div>
         </div>
             <div class="giveLove">
-                <div ng-click="updateGive()" id="button" class="well">Give Love</div>
+                <div ng-click="updateGive()" id="button" ng-hide="receivebutton" class="well">Give Some Love</div>
             </div>
 
           </div>
-        <div ng-show="give" class="container col-md-5 form">
-            <form>
-                <div class="row">
-                    <label for="title">Title:</label>
-                    <input ng-model="love.title" type="text" name="title" id="title"/>
-                    </div>
-                <div class="row">
-                <label for="textarea">Share Your Love:</label>
-                    <textarea ng-model="love.textarea" type="textarea" name="textarea" id="textarea"></textarea>
-                </div>
-                <div class="row">
-                    <label for="name">Name:</label>
-                    <input ng-model="love.name" type="text" name="name" id="name"/>
-                    </div>
-                <div class="row">
-                    <input type="submit" ng-click="add(love)" id="submit" addvalue="Give Some Love"/>
-                </div>
-            </form>
+        <div ng-include="'/views/giveLove.html'" ng-show="give" class="container col-md-5 form">
 
         </div>
-        <div class="showLove col-md-4 container" ng-show="receive">
-            <div ng-repeat="love in loveNotes" class="display row">
-                <h3>{{love.title}}</h3>
-                <p>{{love.textarea}}</p>
-                <p>{{love.name}}</p>
-            </div>
+        <div ng-include="'/views/receiveLove.html'" class="showLove container" ng-show="receive">
+
         </div>
 
     </div>

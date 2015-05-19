@@ -29,7 +29,7 @@ input {
   display: inline-block;
 }
 textarea {
-float: right;
+  float: right;
   clear: both;
   margin-bottom: 10px;
   width: 100%;

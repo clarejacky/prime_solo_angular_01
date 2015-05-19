@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-
+<form>
+    <div class="row">
+        <label for="title">Title:</label>
+        <input ng-model="love.title" type="text" name="title" id="title"/>
+    </div>
+    <div class="row">
+        <label for="textarea">Share Your Love:</label>
+        <textarea ng-model="love.textarea" type="textarea" name="textarea" id="textarea"></textarea>
+    </div>
+    <div class="row">
+        <label for="name">Name:</label>
+        <input ng-model="love.name" type="text" name="name" id="name"/>
+    </div>
+    <div class="row">
+        <input type="submit" ng-click="add(love)" id="submit" addvalue="Give Some Love"/>
+    </div>
+</form>
 </body>
 </html>
