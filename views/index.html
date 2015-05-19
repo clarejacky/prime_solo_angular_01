@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
 
     <div class="container" ng-controller="GiveController">
-    <div class="giveLove">
-        <button ng-click="updateGive()" class="btn btn-info">Give Love</button>
-        <div ng-show="give">
+      <div class="button col-md-4">
+         <div class="receiveLove">
+            <div ng-click='notes()' id="button" class="well">Receive Love</div>
+        </div>
+            <div class="giveLove">
+                <div ng-click="updateGive()" id="button" class="well">Give Love</div>
+            </div>
+
+          </div>
+        <div ng-show="give" class="container col-md-5 form">
             <form>
                 <div>
                     <label for="title">Title:</label>
                     <input ng-model="love.title" type="text" name="title" id="title"/>
                 </div>
                 <div>
-                    <label for="textarea">Share Your Love Here:</label>
+                    <label for="textarea">Share Your Love:</label>
                     <input ng-model="love.textarea" type="textarea" name="textarea" id="textarea"/>
                 </div>
                 <div>
@@ -25,13 +34,13 @@
                     <input ng-model="love.name" type="text" name="name" id="name"/>
                 </div>
                 <div>
-                    <input type="submit" ng-click="add(love)" addvalue="Give Some Love"/>
+                    <input type="submit" ng-click="add(love)" id="submit" addvalue="Give Some Love"/>
                 </div>
             </form>
 
         </div>
-        <div class="showLove">
-            <div ng-repeat="love in loveNotes">
+        <div class="showLove col-md-4 container" ng-show="receive">
+            <div ng-repeat="love in loveNotes" class="display">
                 <h3>{{love.title}}</h3>
                 <p>{{love.textarea}}</p>
                 <p>{{love.name}}</p>
@@ -40,15 +49,7 @@
 
     </div>
 
-        </div>
-
-
-<!--<div class="container" ng-controller="ReceiveController">-->
-    <!--<div class="receiveLove">-->
-        <!--<button ng-click="updateReceive()" class="btn btn-info">Receive Love</button>-->
-        <!--<div ng-include="'views/receiveLove.html'" ng-show="receive">-->
-    <!--</div>-->
-    <!--</div>-->
+    </div>
 
 <script type="text/javascript" src="/vendor/angular/angular.min.js"></script>
 <script type="text/javascript" src="/javascripts/app.min.js"></script>

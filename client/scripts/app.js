@@ -5,7 +5,7 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
     $scope.love ={};
     $scope.loveNotes =[];
 
-    var fetchNotes = function() {
+   var fetchNotes = function() {
         return $http.get('/love').then(function(response){
             console.log(response);
             $scope.love ={};
@@ -20,6 +20,10 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
     fetchNotes();
 
     //$scope.heading = "Message: ";
+
+    $scope.notes = function () {
+        $scope.receive = true;
+    }
 
     $scope.updateGive = function(){
         $scope.give = true;

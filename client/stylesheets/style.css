@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("http://www.wired.com/design/wp-content/uploads/2012/06/heart_01_lit.jpg");
+  font-family: 'Indie Flower', cursive;
+  font-size: 14px;
 }
+#button{
+  margin: 20px;
+  background-color: transparent;
+  display: inline-block;
+  width: 100%;
+}
+input {
+  float: right;
+  clear: both;
+}
+.form {
+  margin: 30px;
+  float: right;
+}
+.showLove {
+  font-size: 120%;
+  float: left;
+  clear: both;
 
-a {
-  color: #00B7FF;
+}
+.display {
+  display: inline-block;
 }
