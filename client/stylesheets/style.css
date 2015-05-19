@@ -12,6 +12,8 @@ body {
 input {
   float: right;
   clear: both;
+  margin-bottom: 10px;
+  width: 100%;
 }
 .form {
   margin: 30px;
@@ -25,4 +27,10 @@ input {
 }
 .display {
   display: inline-block;
+}
+textarea {
+float: right;
+  clear: both;
+  margin-bottom: 10px;
+  width: 100%;
 }
