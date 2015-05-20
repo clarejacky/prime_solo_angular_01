@@ -11,22 +11,27 @@ myApp.controller('GiveController', ['$scope', '$http', function($scope, $http){
 
    var fetchNotes = function() {
         return $http.get('/love').then(function(response){
-            console.log(response);
-            $scope.love ={};
-            $scope.loveNotes = response.data.slice(0, response.data.length - 1);
-            console.log(response.data);
+            if(response.data.length == 1){
+                alert("Thank you for submitting some love");
+                location.reload();
+            } else{
+                console.log(response);
+                $scope.love ={};
+                $scope.loveNotes = response.data.slice(0, response.data.length - 1);
+                console.log(response.data);
+                $scope.receivebutton = true;
+                $scope.give = false;
+            }
 
         })
     }
 
     $scope.add = function(love){
-        //if(!$scope.love.name || !$scope.love.textarea || !$scope.love.title){
-        //    alert("Please fill in all data boxes!");
-        //} else {
-            $scope.receivebutton = true;
-            $scope.give = false;
+        if(!$scope.love.name || !$scope.love.textarea || !$scope.love.title){
+            alert("Please fill in all data boxes!");
+        } else {
             return $http.post('/love', love).then(fetchNotes());
-        //}
+        }
     };
     //fetchNotes();
 

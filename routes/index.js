@@ -7,11 +7,6 @@ var mongoose = require('mongoose');
 router.get('/', function(req, res, next) {
   res.sendFile(path.resolve(__dirname, '../views/index.html'));
 });
-//
-//router.post('/', function(req,res,next) {
-//  Love.create(req.body, function (err, post) {
-//    res.json(post);
-//  });
-//});
+
 
 module.exports = router;
