@@ -1,13 +1,16 @@
 body {
   background-image: url("http://www.wired.com/design/wp-content/uploads/2012/06/heart_01_lit.jpg");
-  font-family: 'Indie Flower', cursive;
-  font-size: 14px;
+    font-family: 'Inconsolata';
+    font-size: 14px;
 }
 #button{
-  margin: 20px;
+  margin-top: 20px;
   background-color: transparent;
   display: inline-block;
   width: 100%;
+    font-size: 300%;
+    border: none;
+    color: white;
 }
 input {
   float: right;
@@ -17,24 +20,23 @@ input {
 }
 .form {
   margin: 30px;
-  float: right;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    float: left;
+    clear: both;
 }
 .showLove {
   font-size: 120%;
-  float: left;
-  clear: both;
+    float: left;
+    clear: both;
 
 }
 .display {
   display: inline-block;
 }
+
 textarea {
   float: right;
   clear: both;
   margin-bottom: 10px;
   width: 100%;
-}
-.receivebutton {
-    float: center;
-  font-size: 120%;
 }

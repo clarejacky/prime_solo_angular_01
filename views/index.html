@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
-    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
 
     <div class="container" ng-controller="GiveController">
       <div class="button col-md-4">
          <div class="receiveLove">
-            <div ng-click='notes()' id="button" ng-show="receivebutton" class="well receivebutton">Receive Some Love</div>
+            <div ng-click='notes()' id="button" ng-show="receivebutton" class="well receivebutton">Receive Love</div>
         </div>
             <div class="giveLove">
                 <div ng-click="updateGive()" id="button" ng-hide="receivebutton" class="well">Give Some Love</div>
             </div>
-
           </div>
         <div ng-include="'/views/giveLove.html'" ng-show="give" class="container col-md-5 form">
-
         </div>
         <div ng-include="'/views/receiveLove.html'" class="showLove container" ng-show="receive">
-
         </div>
 
     </div>
